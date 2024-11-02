@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class Character : MonoBehaviour
+{
+    public int health = 100;
+
+    // Метод для уменьшения здоровья
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        
+        if (health <= 0)
+        {
+            Debug.Log("Character died");
+            // Здесь можно добавить логику смерти персонажа
+        }
+    }
+}
